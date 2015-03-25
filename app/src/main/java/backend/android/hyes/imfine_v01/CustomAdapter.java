@@ -3,7 +3,7 @@ package backend.android.hyes.imfine_v01;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,8 +41,12 @@ public class CustomAdapter extends ArrayAdapter<Item> {
         TextView time = (TextView) row.findViewById(R.id.time);
         TextView info = (TextView) row.findViewById(R.id.info);
 
-        color_index.getBackground().setColorFilter(Color.RED, PorterDuff.Mode.MULTIPLY);
+//        color_index.getBackground().setColorFilter(Color.RED, PorterDuff.Mode.MULTIPLY);
+//        color_index.setBackgroundColor(Color.RED);
         //확인해볼 것!
+        String color = data.get(position).getColor_idx();
+        Log.i("color", color);
+        color_index.setBackgroundColor(Color.parseColor(color));
 
         time.setText(data.get(position).getTime());
         info.setText(data.get(position).getDetails());

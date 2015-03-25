@@ -14,7 +14,7 @@ public class Main extends ActionBarActivity {
     private ArrayList<Item> temp = new ArrayList<Item>();
     ListView listView;
 
-    String[] color_idx = {"red", "blue", "yellow", "black", "red"};
+    String[] color_idx = {"#B2FF59", "#FFC107", "#3D5AFE", "#F36C60", "#B2FF59"};
     String[] times = {"05:30", "06:40", "07:10", "09:40", "11:00"};
     String[] info ={"수유 어쩌구저쩌구", "기저귀 갈아줬고", "약 잘 먹었고~~", " ", "수유 잘 먹었고~"};
 
