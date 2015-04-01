@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">CardTest3</string>
+    <string name="app_name">ImFine_v03</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">추가예정!!</string>
     <string name="title_activity_main_activity2">MainActivity2</string>
@@ -9,5 +9,6 @@
     <string name="welcome_msg1">환영합니다!</string>
     <string name="welcome_msg2">아직 회원이 아니신가요?</string>
     <string name="register_btn">가입하기</string>
-
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
 </resources>
