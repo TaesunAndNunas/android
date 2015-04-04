@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#00000000"
+        android:gravity="bottom"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:paddingLeft="2dp">
+
+            <ImageButton
+                android:src="@drawable/pill"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageButton"
+                android:scaleType="fitCenter"
+                android:background="@drawable/medicine_round"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <ImageButton
+                android:src="@drawable/sleep"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageButton2"
+                android:scaleType="fitCenter"
+                android:background="@drawable/sleep_round"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <ImageButton
+                android:src="@drawable/diaper"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageButton3"
+                android:scaleType="fitCenter"
+                android:background="@drawable/diaper_round"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <ImageButton
+                android:src="@drawable/milk"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageButton4"
+                android:scaleType="fitCenter"
+                android:background="@drawable/milk_round"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
