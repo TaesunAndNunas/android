@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/editText7"
+            android:layout_weight="1"
+            android:text="12"
+            android:gravity="center_vertical|right"
+            android:textSize="40dp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/editText9"
+            android:layout_weight="0.2"
+            android:text=":"
+            android:textSize="24dp"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/editText10"
+            android:layout_weight="1"
+            android:textSize="40dp"
+            android:gravity="center_vertical|left"
+            android:text="40" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="배변 종류"
+                android:id="@+id/textView32"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:textSize="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="배변 상태"
+                android:id="@+id/textView30"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:textSize="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="사진 첨부"
+                android:id="@+id/textView28"
+                android:layout_weight="2"
+                android:gravity="center_vertical|right"
+                android:textSize="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="상세 메모"
+                android:id="@+id/textView31"
+                android:layout_weight="1"
+                android:gravity="bottom|right"
+                android:textSize="24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <Switch android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumb="@drawable/custom_switch_inner_holo_light"
+                    android:track="@drawable/custom_switch_inner_holo_light"
+                    android:textOn="소변"
+                    android:textOff="대변"/>
+                <!--<Switch-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/switch1"-->
+                    <!--android:checked="false"-->
+                    <!--android:paddingLeft="20dp"-->
+                    <!--android:paddingRight="20dp" />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="양호"
+                    android:id="@+id/button"
+                    android:layout_weight="1"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="보통"
+                    android:id="@+id/button4"
+                    android:layout_weight="1"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="나쁨"
+                    android:id="@+id/button5"
+                    android:layout_weight="1"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/diaper_camera_btn"
+                    android:src="@drawable/camera"
+                    android:layout_weight="0.5" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="130dp"
+                        android:id="@+id/diaper_picture"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/editText14"
+            android:layout_gravity="center_horizontal"
+            android:padding="30dp"
+            android:textSize="15dp"
+            android:background="@drawable/memo_round"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="10dp"
+            android:gravity="top" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="입력 취소"
+            android:id="@+id/button6"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="저장하기"
+            android:id="@+id/button7"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp" />
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/Users/hyes/Desktop/ImFine_v03/app/src/main/res/layout/diaper_detail.xml -->

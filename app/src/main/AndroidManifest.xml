@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hudi.android.hyes.ImFine_v03" >
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -18,6 +21,10 @@
         </activity>
         <activity android:name="hudi.android.hyes.ImFine_v03.Register"/>
         <activity android:name="hudi.android.hyes.ImFine_v03.MainActivity"/>
+        <activity android:name="hudi.android.hyes.ImFine_v03.Milk"/>
+        <activity android:name="hudi.android.hyes.ImFine_v03.Diaper"/>
+        <activity android:name="hudi.android.hyes.ImFine_v03.Medicine"/>
+        <activity android:name="hudi.android.hyes.ImFine_v03.Sleep"/>
 
     </application>
 

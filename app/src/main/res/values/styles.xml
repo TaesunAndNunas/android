@@ -17,4 +17,84 @@
         <item name="color">@android:color/white</item>
     </style>
 
+
+
+
+    <style name="Now"></style>
+
+    <style name="Now.card_expand_inner_layout">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Now.card_expand_inner_layout.light_gray">
+        <item name="android:background">#515254</item>
+        <item name="android:textColor">#B3B2B2</item>
+    </style>
+
+    <style name="Now.card_expand_inner_layout.light_gray.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Now.card_expand_inner_layout.dark">
+        <item name="android:background">#515254</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+    <style name="Now.card_expand_inner_layout.dark.bold" parent="@style/Now.card_expand_inner_layout.dark">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+    <!--card_custom-->
+    <style name="card.native.header_inner_frame">
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="card.native.header_outer_layout">
+        <item name="android:paddingLeft">@dimen/card_header_native_default_paddingLeft</item>
+        <item name="android:paddingRight">@dimen/card_header_native_default_paddingRight</item>
+        <item name="android:paddingTop">@dimen/card_header_native_default_paddingTop</item>
+        <item name="android:paddingBottom">@dimen/card_header_native_default_paddingBottom</item>
+    </style>
+
+    <style name="card.native.header_outer_layout.nomargin">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="card.native.header_simple_title">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/card_text_color_header</item>
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/card_header_native_simple_title_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/card_header_native_simple_title_margin_top</item>
+        <item name="android:layout_marginRight">@dimen/card_header_native_simple_title_margin_right</item>
+        <item name="android:layout_marginBottom">@dimen/card_header_native_simple_title_margin_bottom</item>
+    </style>
+
+    <style name="card.native.main_contentExpand">
+        <item name="android:background">@color/card_backgroundExpand</item>
+        <item name="android:layout_marginLeft">@dimen/card_expand_native_margin_right</item>
+        <item name="android:layout_marginRight">@dimen/card_expand_native_margin_right</item>
+        <item name="android:paddingLeft">@dimen/card_expand_native_layout_padding_left</item>
+        <item name="android:paddingRight">@dimen/card_expand_native_layout_padding_right</item>
+        <item name="android:paddingTop">@dimen/card_expand_native_layout_padding_top</item>
+        <item name="android:paddingBottom">@dimen/card_expand_native_layout_padding_bottom</item>
+    </style>
+
+    <style name="card.native.main_layout">
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:layout_marginTop">@dimen/card_main_layout_native_view_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/card_main_layout_native_view_margin_bottom</item>
+        <item name="android:layout_marginLeft">@dimen/card_main_layout_native_view_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/card_main_layout_native_view_margin_right</item>
+    </style>
+
 </resources>

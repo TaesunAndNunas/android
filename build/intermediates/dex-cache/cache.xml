@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d6467247ced8a5d51f8ff73a6595d517eddba6">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-3b9b313e80260d64e47552eda7de57679a6050fd.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/.gradle/caches/modules-2/files-2.1/com.nhaarman.listviewanimations/lib-manipulation/3.1.0/63737e512fcd9e0ebe9bcd0bb375c2dded74116f/lib-manipulation-3.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="63737e512fcd9e0ebe9bcd0bb375c2dded74116f">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/lib-manipulation-3.1.0-fea6213a7e8cb87ccd2642bdf06b6b9a5cdd7f78.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-d92cac96b0d8bc36bac157e37cde4042e72a3047.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-a8f561980f12bcfb69c119d61340c5614685c9b6.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-extra-dragdrop/2.0.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c2ccd61dc70f7b1dc968c73626f90a61eb542905">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-0d9411407cf4225ab285dedfe08f571eab738862.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-ecaf73e807f4238634e2e04033727347c6dcb649.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/.gradle/caches/modules-2/files-2.1/com.nhaarman.listviewanimations/lib-core/3.1.0/f3f9629b068554d8513a2aaf34418171bf430851/lib-core-3.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f3f9629b068554d8513a2aaf34418171bf430851">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/lib-core-3.1.0-1b6b1113e33d009ba9957daa4359c111c3be451e.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-38d3c8254f93c3b26714cde6b226df065030d173.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-recyclerview/2.0.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="15d2052aed6aa62f341d22e1ba6177697c7dc552">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-7c1a8255cc06b42b775e558335ba53466fb14a54.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/Desktop/201403NEXT/Android/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-0ce3c52bac3172ca13f5ea981cc7b869e7301eeb.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/library-2.4.0-38db31e8638dbe0da0b44b9719c225d14f7650b7.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-3d05789d683be05dca04efc65d760559f5f01a3a.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-extra-staggeredgrid/2.0.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="53c7b3252488ffcd664c6889d8d536a09ae3ad80">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-7c4a845630fff1217beba4a259c8b15a3c8e9872.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/exploded-aar/com.etsy.android.grid/library/1.0.5/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8218789edb56bdcfff7da48e892b37460fc707e2">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-89458b763b70229cc3d63636816b8c7db6d8e2f6.jar" />
+    </item>
+    <item
+        jar="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-cards/2.0.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d851788f6c23d14aa5fa8fbfd6d1b17725ad44c5">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-ab988265f82008e82d4f6dfed62e0288c1869b3d.jar" />
+    </item>
+
+</items>

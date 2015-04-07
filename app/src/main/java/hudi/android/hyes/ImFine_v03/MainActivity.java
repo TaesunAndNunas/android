@@ -1,26 +1,34 @@
 package hudi.android.hyes.ImFine_v03;
 
+import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
-import android.support.v7.widget.Toolbar;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import it.gmariotti.cardslib.library.internal.Card;
 import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
+import it.gmariotti.cardslib.library.internal.CardExpand;
 import it.gmariotti.cardslib.library.internal.CardHeader;
 import it.gmariotti.cardslib.library.view.CardListView;
-
-
 
 
 public class MainActivity extends ActionBarActivity {
@@ -31,25 +39,83 @@ public class MainActivity extends ActionBarActivity {
     private ListView leftDrawerList;
     private ArrayAdapter<String> navigationDrawerAdapter;
     private String[] leftSliderData = {"현재 접속중인 아이 계정", "OOO(남 2개월 | 만0세)", "계정 변경하기", "신규가입하기", "계정추가하기"};
+    private String date_now;
+    private String time_now;
+    private LinearLayout innerLayout;
+    private LinearLayout mainLayout;
+    private RelativeLayout contentLayout;
+    private ArrayList<Card> cards;
+    private CardArrayAdapter mCardArrayAdapter;
+    private CardListView listView;
+    private TextView medicineTime;
+    private TextView sleepTime;
+    private TextView diaperTime;
+    private TextView milkTime;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.demo_fragment_native_list_expand);
 
-        ArrayList<Card> cards = new ArrayList<Card>();
-        for (int i=0;i<200;i++){
-            Card card = init_standard_header_with_expandcollapse_button_custom_area("Header "+i,i);
-            cards.add(card);
-        }
+        Window win = getWindow();
+        win.setContentView(R.layout.demo_fragment_native_list_expand);
 
-        CardArrayAdapter mCardArrayAdapter = new CardArrayAdapter(getApplicationContext(),cards);
+        LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LinearLayout linear = (LinearLayout)inflater.inflate(R.layout.main_buttons_img, null);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        win.addContentView(linear, layoutParams);
 
-        CardListView listView = (CardListView) findViewById(R.id.carddemo_list_expand);
-        if (listView!=null){
-            listView.setAdapter(mCardArrayAdapter);
-        }
+        LayoutInflater inflater2 = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LinearLayout linear2 = (LinearLayout)inflater2.inflate(R.layout.main_text, null);
+        LinearLayout.LayoutParams layoutParams2 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        win.addContentView(linear2, layoutParams2);
 
+
+
+        cards = new ArrayList<Card>();
+//        for (int i=0;i<50;i++){
+//
+//            getCurrentTime();
+//            Card card = CardTest(date_now, i);
+//            cards.add(card);
+//        }
+
+
+       ImageButton img_btn =  (ImageButton)findViewById(R.id.imageButton);
+        img_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createCard(1);
+                Toast.makeText(getApplicationContext(), "수유 새 카드 생성", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageButton img_btn2 =  (ImageButton)findViewById(R.id.imageButton2);
+        img_btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createCard(2);
+                Toast.makeText(getApplicationContext(), "새 카드 생성", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageButton img_btn3 =  (ImageButton)findViewById(R.id.imageButton3);
+        img_btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createCard(3);
+                Toast.makeText(getApplicationContext(), "새 카드 생성", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ImageButton img_btn4 =  (ImageButton)findViewById(R.id.imageButton4);
+        img_btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createCard(4);
+                Toast.makeText(getApplicationContext(), "새 카드 생성", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         nitView();
         if (toolbar != null) {
@@ -59,6 +125,35 @@ public class MainActivity extends ActionBarActivity {
         initDrawer();
 
     }
+
+
+    private void createCard(int num){
+
+        getCurrentTime();
+        Card card = CardTest(date_now, num);
+        cards.add(card);
+
+        mCardArrayAdapter = new CardArrayAdapter(getApplicationContext(),cards);
+
+        listView = (CardListView) findViewById(R.id.cardlist_expand);
+            if (listView!=null){
+                listView.setAdapter(mCardArrayAdapter);
+            }
+        }
+
+
+    private void getCurrentTime(){
+
+        long currentTimeMillis = System.currentTimeMillis();
+        Date date = new Date(currentTimeMillis);
+        SimpleDateFormat curDate = new SimpleDateFormat("yy년MM월dd일");
+        SimpleDateFormat curTime = new SimpleDateFormat("a hh:mm:ss");
+
+        date_now = curDate.format(date);
+        time_now = curTime.format(date);
+
+    }
+
 
     private void nitView() {
         leftDrawerList = (ListView) findViewById(R.id.left_drawer);
@@ -101,24 +196,57 @@ public class MainActivity extends ActionBarActivity {
     /**
      * This method builds a standard header with a custom expand/collpase
      */
-    private Card init_standard_header_with_expandcollapse_button_custom_area(String titleHeader,int i) {
+    private Card CardTest(String titleHeader, int i) {
 
-        //Create a Card
-        Card card = new Card(getApplicationContext());
+        long currentTimeMillis = System.currentTimeMillis();
+        Date date = new Date(currentTimeMillis);
+        SimpleDateFormat textTime = new SimpleDateFormat("hh:mm");
+        String now_text = textTime.format(date);
 
-        //Create a CardHeader
+        medicineTime = (TextView)findViewById(R.id.medicineTime);
+        sleepTime = (TextView)findViewById(R.id.sleepTime);
+        diaperTime = (TextView)findViewById(R.id.diaperTime);
+        milkTime = (TextView)findViewById(R.id.milkTime);
+
+        mainLayout = (LinearLayout) findViewById(R.id.main_layout);
+        innerLayout = (LinearLayout) findViewById(R.id.inner_layout);
+        contentLayout = (RelativeLayout) findViewById(R.id.contentLayout);
+
+        Card card;
+
+        if(i == 1) {
+            card = new CustomCard(getApplicationContext(), R.layout.inner_content);
+            medicineTime.setText(now_text);
+            //Card card = new CustomCard(getApplicationContext());
+        }else if(i == 2) {
+            card = new CustomCardSleep(getApplicationContext(), R.layout.inner_content);
+            sleepTime.setText(now_text);
+        }else if(i == 3){
+            card = new CustomCardDiaper(getApplicationContext(), R.layout.inner_content);
+            diaperTime.setText(now_text);
+        }else {
+            card = new CustomCardMilk(getApplicationContext(), R.layout.inner_content);
+            milkTime.setText(now_text);
+        }
+
         CardHeader header = new CardHeader((getApplicationContext()));
+        //card.setupInnerViewElements(mainLayout, contentLayout);
 
-        //Set the header title
-        header.setTitle("ImFine_!");
+        header.setTitle(titleHeader);
 
-        //Set visible the expand/collapse button
+
         header.setButtonExpandVisible(true);
 
-        //Add Header to card
         card.addCardHeader(header);
 
+        CardExpand cardExpand1 = new CustomExpandCard(getApplicationContext());
 
+        cardExpand1.setupInnerViewElements(mainLayout, innerLayout);
+        card.addCardExpand(cardExpand1);
+
+        //CardThumbnail thumbnail = new CardThumbnail(getApplicationContext());
+        //thumbnail.setDrawableResource(R.drawable.diaper);
+        //card.addCardThumbnail(thumbnail);
 
         //Swipe
         card.setSwipeable(true);

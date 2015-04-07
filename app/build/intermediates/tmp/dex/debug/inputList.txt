@@ -1,0 +1,16 @@
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/classes/debug
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-0ce3c52bac3172ca13f5ea981cc7b869e7301eeb.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-7c4a845630fff1217beba4a259c8b15a3c8e9872.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-0d9411407cf4225ab285dedfe08f571eab738862.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-7c1a8255cc06b42b775e558335ba53466fb14a54.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-d92cac96b0d8bc36bac157e37cde4042e72a3047.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/lib-core-3.1.0-1b6b1113e33d009ba9957daa4359c111c3be451e.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-ab988265f82008e82d4f6dfed62e0288c1869b3d.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-89458b763b70229cc3d63636816b8c7db6d8e2f6.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/lib-manipulation-3.1.0-fea6213a7e8cb87ccd2642bdf06b6b9a5cdd7f78.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/library-2.4.0-38db31e8638dbe0da0b44b9719c225d14f7650b7.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-ecaf73e807f4238634e2e04033727347c6dcb649.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-3b9b313e80260d64e47552eda7de57679a6050fd.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-38d3c8254f93c3b26714cde6b226df065030d173.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-a8f561980f12bcfb69c119d61340c5614685c9b6.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-3d05789d683be05dca04efc65d760559f5f01a3a.jar

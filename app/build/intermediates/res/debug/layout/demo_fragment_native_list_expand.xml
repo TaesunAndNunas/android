@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="?actionBarSize"
+        android:background="?attr/colorPrimary"
+
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!--아래는 내 코드-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <it.gmariotti.cardslib.library.view.CardListView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        style="@style/native_list_external"
+        card:list_card_layout_resourceID="@layout/custom_card"
+        android:id="@+id/cardlist_expand" />
+
+    </LinearLayout>
+<!--native_list_card_layout-->
+    </LinearLayout>
+    <!-- navigation drawer -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="#fff">
+
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:divider="#eee"
+            android:dividerHeight="1dp" />
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout><!-- From: file:/Users/hyes/Desktop/ImFine_v03/app/src/main/res/layout/demo_fragment_native_list_expand.xml -->
