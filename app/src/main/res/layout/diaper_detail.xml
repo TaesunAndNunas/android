@@ -115,7 +115,8 @@
                     android:thumb="@drawable/custom_switch_inner_holo_light"
                     android:track="@drawable/custom_switch_inner_holo_light"
                     android:textOn="소변"
-                    android:textOff="대변"/>
+                    android:textOff="대변"
+                    android:layout_marginLeft="10dp" />
                 <!--<Switch-->
                     <!--android:layout_width="wrap_content"-->
                     <!--android:layout_height="wrap_content"-->
@@ -132,29 +133,35 @@
                 android:layout_height="0dp"
                 android:layout_weight="1" >
 
-                <Button
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="양호"
-                    android:id="@+id/button"
-                    android:layout_weight="1"
-                    android:textSize="15dp" />
+                    android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="보통"
-                    android:id="@+id/button4"
-                    android:layout_weight="1"
-                    android:textSize="15dp" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="양호"
+                        android:id="@+id/radioButton"
+                        android:checked="false"
+                        android:layout_weight="1" />
 
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="나쁨"
-                    android:id="@+id/button5"
-                    android:layout_weight="1"
-                    android:textSize="15dp" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="보통"
+                        android:id="@+id/radioButton2"
+                        android:checked="false"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="나쁨"
+                        android:id="@+id/radioButton3"
+                        android:checked="false"
+                        android:layout_weight="1" />
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -175,7 +182,8 @@
                     android:orientation="horizontal"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    >
 
                     <ImageView
                         android:layout_width="100dp"
@@ -208,8 +216,8 @@
             android:layout_marginRight="14dp"
             android:layout_marginTop="10dp"
             android:gravity="top" />
-    </LinearLayout>
 
+    </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -234,6 +242,5 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:layout_marginRight="20dp" />
-    </LinearLayout>
-
+        </LinearLayout>
 </LinearLayout>

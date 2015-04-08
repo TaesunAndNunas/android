@@ -97,6 +97,24 @@ activity#hudi.android.hyes.ImFine_v03.Sleep
 ADDED from AndroidManifest.xml:27:9
 	android:name
 		ADDED from AndroidManifest.xml:27:19
+receiver#hudi.android.hyes.ImFine_v03.Widget
+ADDED from AndroidManifest.xml:29:9
+	android:label
+		ADDED from AndroidManifest.xml:29:42
+	android:name
+		ADDED from AndroidManifest.xml:29:19
+meta-data#android.appwidget.provider
+ADDED from AndroidManifest.xml:30:13
+	android:resource
+		ADDED from AndroidManifest.xml:32:17
+	android:name
+		ADDED from AndroidManifest.xml:31:17
+intent-filter#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from AndroidManifest.xml:34:13
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from AndroidManifest.xml:35:17
+	android:name
+		ADDED from AndroidManifest.xml:35:25
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:21.0.3:15:5

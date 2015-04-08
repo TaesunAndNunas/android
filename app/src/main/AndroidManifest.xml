@@ -26,6 +26,16 @@
         <activity android:name="hudi.android.hyes.ImFine_v03.Medicine"/>
         <activity android:name="hudi.android.hyes.ImFine_v03.Sleep"/>
 
+        <receiver android:name=".Widget" android:label="widget_1st">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_configuration"/>
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,7 +33,8 @@ public class Register extends ActionBarActivity {
     private static final int TAKE_PICTURE = 1;
     private static final int PICK_PICTURE = 2;
     private Uri outputFileUri;
-    ImageView imageView;
+    private ImageView imageView;
+    private RadioButton male, female;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,11 @@ public class Register extends ActionBarActivity {
 
         imageView = (ImageView) findViewById(R.id.profile_picture);
 
+        male= (RadioButton)findViewById(R.id.male_radio_btn);
+        female = (RadioButton)findViewById(R.id.female_radio_btn);
+
+
+
         ImageView camera_btn = (ImageView)findViewById(R.id.profile_camera_btn);
         camera_btn.setOnClickListener(new View.OnClickListener() {
 
@@ -50,6 +57,9 @@ public class Register extends ActionBarActivity {
                 profile_camera_selection();
             }
         });
+
+
+
 
         Button register_btn = (Button)findViewById(R.id.register_btn);
         register_btn.setOnClickListener(new View.OnClickListener() {
