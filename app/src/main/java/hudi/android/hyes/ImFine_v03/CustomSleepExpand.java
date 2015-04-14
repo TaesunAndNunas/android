@@ -10,11 +10,11 @@ import it.gmariotti.cardslib.library.internal.CardExpand;
 /**
  * Created by hyes on 2015. 4. 2..
  */
-public class CustomExpandCard extends CardExpand {
+public class CustomSleepExpand extends CardExpand {
 
         //Use your resource ID for your inner layout
-        public CustomExpandCard(Context context) {
-            super(context, R.layout.inner_expand);
+        public CustomSleepExpand(Context context) {
+            super(context, R.layout.inner_expand_sleep);
         }
 
         @Override
@@ -23,14 +23,15 @@ public class CustomExpandCard extends CardExpand {
             if (view == null) return;
 
             //Retrieve TextView elements
-            TextView tx1 = (TextView) view.findViewById(R.id.carddemo_expand_text1);
-            TextView tx2 = (TextView) view.findViewById(R.id.carddemo_expand_text2);
+            TextView tx1 = (TextView) view.findViewById(R.id.sleep_tv1);
+            TextView tx2 = (TextView) view.findViewById(R.id.sleep_tv2);
             TextView tx3 = (TextView) view.findViewById(R.id.carddemo_expand_text3);
             TextView tx4 = (TextView) view.findViewById(R.id.carddemo_expand_text4);
 
             //Set value in text views
             if (tx1 != null) {
-                tx1.setText(getContext().getString(R.string.demo_expand_customtitle1));
+                tx1.setText("customizing!!");
+//                getContext().getString(R.string.demo_expand_customtitle1)
             }
 
             if (tx2 != null) {

@@ -35,12 +35,10 @@ public class CustomCardMedicine extends Card {
         currentTimeMillis = System.currentTimeMillis();
         date = new Date(currentTimeMillis);
         init();
-
     }
 
 
     private void init(){
-
         //No Header
 
         //Set a OnClickListener listener
@@ -52,8 +50,6 @@ public class CustomCardMedicine extends Card {
                 Intent intent = new Intent(getContext(), Medicine.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
-
-
             }
         });
     }

@@ -42,6 +42,10 @@ public class MainActivity extends ActionBarActivity {
     private String date_now;
     private String time_now;
     private LinearLayout innerLayout;
+    private LinearLayout innerLayout_medicine;
+    private LinearLayout innerLayout_sleep;
+    private LinearLayout innerLayout_diaper;
+    private LinearLayout innerLayout_milk;
     private LinearLayout mainLayout;
     private RelativeLayout contentLayout;
     private ArrayList<Card> cards;
@@ -98,7 +102,6 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 createCard(2);
                 sleep_count_num += 1;
-                Toast.makeText(getApplicationContext(), "새 카드 생성", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -108,7 +111,6 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 createCard(3);
                 diaper_count_num += 1;
-                Toast.makeText(getApplicationContext(), "새 카드 생성", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -118,7 +120,6 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 createCard(4);
                 milk_count_num += 1;
-                Toast.makeText(getApplicationContext(), "새 카드 생성", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -215,6 +216,10 @@ public class MainActivity extends ActionBarActivity {
 
         mainLayout = (LinearLayout) findViewById(R.id.main_layout);
         innerLayout = (LinearLayout) findViewById(R.id.inner_layout);
+        innerLayout_medicine = (LinearLayout) findViewById(R.id.inner_layout_medicine);
+        innerLayout_sleep = (LinearLayout) findViewById(R.id.inner_layout_sleep);
+        innerLayout_diaper = (LinearLayout) findViewById(R.id.inner_layout_diaper);
+        innerLayout_milk = (LinearLayout) findViewById(R.id.inner_layout_milk);
         contentLayout = (RelativeLayout) findViewById(R.id.contentLayout);
 
         Card card;
@@ -227,12 +232,20 @@ public class MainActivity extends ActionBarActivity {
             String count_total = Integer.toString(medicine_count_num);
             count.setText(count_total);
 
+            CardExpand cardExpand1 = new CustomMedicineExpand(getApplicationContext());
+            cardExpand1.setupInnerViewElements(mainLayout, innerLayout_medicine);
+            card.addCardExpand(cardExpand1);
+
         }else if(i == 2) {
             card = new CustomCardSleep(getApplicationContext(), R.layout.inner_content);
             sleepTime.setText(now_text);
             TextView count = (TextView)findViewById(R.id.sleepCount);
             String count_total = Integer.toString(sleep_count_num);
             count.setText(count_total);
+
+            CardExpand cardExpand1 = new CustomSleepExpand(getApplicationContext());
+            cardExpand1.setupInnerViewElements(mainLayout, innerLayout_sleep);
+            card.addCardExpand(cardExpand1);
 
 
         }else if(i == 3){
@@ -242,6 +255,11 @@ public class MainActivity extends ActionBarActivity {
             String count_total = Integer.toString(diaper_count_num);
             count.setText(count_total);
 
+            CardExpand cardExpand1 = new CustomDiaperExpand(getApplicationContext());
+            cardExpand1.setupInnerViewElements(mainLayout, innerLayout_diaper);
+            card.addCardExpand(cardExpand1);
+
+
 
         }else {
             card = new CustomCardMilk(getApplicationContext(), R.layout.inner_content);
@@ -249,6 +267,11 @@ public class MainActivity extends ActionBarActivity {
             TextView count = (TextView)findViewById(R.id.milkCount);
             String count_total = Integer.toString(milk_count_num);
             count.setText(count_total);
+
+            CardExpand cardExpand1 = new CustomMilkExpand(getApplicationContext());
+            cardExpand1.setupInnerViewElements(mainLayout, innerLayout_milk);
+            card.addCardExpand(cardExpand1);
+
         }
 
         CardHeader header = new CardHeader((getApplicationContext()));
@@ -257,14 +280,14 @@ public class MainActivity extends ActionBarActivity {
         header.setTitle(titleHeader);
 
 
-        header.setButtonExpandVisible(true);
+       header.setButtonExpandVisible(true);
 
         card.addCardHeader(header);
 
-        CardExpand cardExpand1 = new CustomExpandCard(getApplicationContext());
-
-        cardExpand1.setupInnerViewElements(mainLayout, innerLayout);
-        card.addCardExpand(cardExpand1);
+//        CardExpand cardExpand1 = new CustomExpandCard(getApplicationContext());
+//
+//        cardExpand1.setupInnerViewElements(mainLayout, innerLayout);
+//        card.addCardExpand(cardExpand1);
 
         //CardThumbnail thumbnail = new CardThumbnail(getApplicationContext());
         //thumbnail.setDrawableResource(R.drawable.diaper);
