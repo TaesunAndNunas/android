@@ -17,19 +17,23 @@ import it.gmariotti.cardslib.library.internal.Card;
 /**
  * Created by hyes on 2015. 4. 6..
  */
-public class CustomCard extends Card {
+public class CustomCardMedicine extends Card {
 
+    private long currentTimeMillis;
+    private Date date;
     protected ImageView colorBar;
-    protected TextView time;
+    protected TextView medicine_time;
     private Context mContext;
 
-    public CustomCard(Context context) {
+    public CustomCardMedicine(Context context) {
         super(context);
     }
 
-    public CustomCard(Context context, int innerLayout) {
+    public CustomCardMedicine(Context context, int innerLayout) {
         super(context, innerLayout);
         mContext= context;
+        currentTimeMillis = System.currentTimeMillis();
+        date = new Date(currentTimeMillis);
         init();
 
     }
@@ -59,18 +63,15 @@ public class CustomCard extends Card {
 
         //Retrieve elements
         colorBar = (ImageView) parent.findViewById(R.id.colorBar);
-        time = (TextView) parent.findViewById(R.id.timeTextView);
+        medicine_time = (TextView) parent.findViewById(R.id.timeTextView);
 
         colorBar.setBackgroundColor(Color.parseColor("#FFB377"));
-
-        long currentTimeMillis = System.currentTimeMillis();
-        Date date = new Date(currentTimeMillis);
 
         SimpleDateFormat curTime = new SimpleDateFormat("a hh:mm:ss");
         String time_now = curTime.format(date);
 
-        if (time!=null)
-            time.setText(time_now);
+        if (medicine_time!=null)
+            medicine_time.setText(time_now);
 
 //        if (mSecondaryTitle!=null)
 //            mSecondaryTitle.setText(R.string.demo_custom_card_googleinc);

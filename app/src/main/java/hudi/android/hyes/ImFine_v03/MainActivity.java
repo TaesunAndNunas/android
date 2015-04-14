@@ -51,6 +51,7 @@ public class MainActivity extends ActionBarActivity {
     private TextView sleepTime;
     private TextView diaperTime;
     private TextView milkTime;
+    private int medicine_count_num = 1, sleep_count_num = 1, diaper_count_num = 1, milk_count_num =1;
 
 
     @Override
@@ -86,6 +87,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 createCard(1);
+                medicine_count_num += 1;
                 Toast.makeText(getApplicationContext(), "수유 새 카드 생성", Toast.LENGTH_SHORT).show();
             }
         });
@@ -95,6 +97,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 createCard(2);
+                sleep_count_num += 1;
                 Toast.makeText(getApplicationContext(), "새 카드 생성", Toast.LENGTH_SHORT).show();
             }
         });
@@ -104,6 +107,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 createCard(3);
+                diaper_count_num += 1;
                 Toast.makeText(getApplicationContext(), "새 카드 생성", Toast.LENGTH_SHORT).show();
             }
         });
@@ -113,6 +117,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 createCard(4);
+                milk_count_num += 1;
                 Toast.makeText(getApplicationContext(), "새 카드 생성", Toast.LENGTH_SHORT).show();
             }
         });
@@ -215,18 +220,35 @@ public class MainActivity extends ActionBarActivity {
         Card card;
 
         if(i == 1) {
-            card = new CustomCard(getApplicationContext(), R.layout.inner_content);
+
+            card = new CustomCardMedicine(getApplicationContext(), R.layout.inner_content);
             medicineTime.setText(now_text);
-            //Card card = new CustomCard(getApplicationContext());
+            TextView count = (TextView)findViewById(R.id.medicineCount);
+            String count_total = Integer.toString(medicine_count_num);
+            count.setText(count_total);
+
         }else if(i == 2) {
             card = new CustomCardSleep(getApplicationContext(), R.layout.inner_content);
             sleepTime.setText(now_text);
+            TextView count = (TextView)findViewById(R.id.sleepCount);
+            String count_total = Integer.toString(sleep_count_num);
+            count.setText(count_total);
+
+
         }else if(i == 3){
             card = new CustomCardDiaper(getApplicationContext(), R.layout.inner_content);
             diaperTime.setText(now_text);
+            TextView count = (TextView)findViewById(R.id.diaperCount);
+            String count_total = Integer.toString(diaper_count_num);
+            count.setText(count_total);
+
+
         }else {
             card = new CustomCardMilk(getApplicationContext(), R.layout.inner_content);
             milkTime.setText(now_text);
+            TextView count = (TextView)findViewById(R.id.milkCount);
+            String count_total = Integer.toString(milk_count_num);
+            count.setText(count_total);
         }
 
         CardHeader header = new CardHeader((getApplicationContext()));

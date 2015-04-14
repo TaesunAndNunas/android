@@ -19,6 +19,9 @@ import it.gmariotti.cardslib.library.internal.Card;
  */
 public class CustomCardSleep extends Card {
 
+    private long currentTimeMillis;
+    private Date date;
+
     protected ImageView colorBar;
     protected TextView time;
     private Context mContext;
@@ -30,6 +33,9 @@ public class CustomCardSleep extends Card {
     public CustomCardSleep(Context context, int innerLayout) {
         super(context, innerLayout);
         mContext= context;
+        currentTimeMillis = System.currentTimeMillis();
+        date = new Date(currentTimeMillis);
+
         init();
 
     }
@@ -63,9 +69,6 @@ public class CustomCardSleep extends Card {
 
 
         colorBar.setBackgroundColor(Color.parseColor("#57BEA4"));
-
-        long currentTimeMillis = System.currentTimeMillis();
-        Date date = new Date(currentTimeMillis);
 
         SimpleDateFormat curTime = new SimpleDateFormat("a hh:mm:ss");
         String time_now = curTime.format(date);

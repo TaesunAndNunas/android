@@ -19,6 +19,8 @@ import it.gmariotti.cardslib.library.internal.Card;
  */
 public class CustomCardMilk extends Card {
 
+    private long currentTimeMillis;
+    private Date date;
     protected ImageView colorBar;
     protected TextView time;
     private Context mContext;
@@ -30,6 +32,8 @@ public class CustomCardMilk extends Card {
     public CustomCardMilk(Context context, int innerLayout) {
         super(context, innerLayout);
         mContext= context;
+        currentTimeMillis = System.currentTimeMillis();
+        date = new Date(currentTimeMillis);
         init();
 
     }
@@ -62,9 +66,6 @@ public class CustomCardMilk extends Card {
         time = (TextView) parent.findViewById(R.id.timeTextView);
 
         colorBar.setBackgroundColor(Color.parseColor("#FF6D4E"));
-
-        long currentTimeMillis = System.currentTimeMillis();
-        Date date = new Date(currentTimeMillis);
 
         SimpleDateFormat curTime = new SimpleDateFormat("a hh:mm:ss");
         String time_now = curTime.format(date);

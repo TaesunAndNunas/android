@@ -19,10 +19,11 @@ import it.gmariotti.cardslib.library.internal.Card;
  */
 public class CustomCardDiaper extends Card {
 
+    private long currentTimeMillis;
+    private Date date;
     protected ImageView colorBar;
     protected TextView time;
     private Context mContext;
-    protected TextView textView;
 
     public CustomCardDiaper(Context context) {
         super(context);
@@ -31,6 +32,8 @@ public class CustomCardDiaper extends Card {
     public CustomCardDiaper(Context context, int innerLayout) {
         super(context, innerLayout);
         mContext= context;
+        currentTimeMillis = System.currentTimeMillis();
+        date = new Date(currentTimeMillis);
         init();
     }
 
@@ -55,8 +58,6 @@ public class CustomCardDiaper extends Card {
 //    @Override
     public void setupInnerViewElements(ViewGroup parent, View view) {
 
-        long currentTimeMillis = System.currentTimeMillis();
-        Date date = new Date(currentTimeMillis);
 
         SimpleDateFormat curTime = new SimpleDateFormat("a hh:mm:ss");
         String time_now = curTime.format(date);
