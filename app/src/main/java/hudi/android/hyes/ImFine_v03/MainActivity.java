@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 
 import it.gmariotti.cardslib.library.internal.Card;
@@ -78,10 +79,11 @@ public class MainActivity extends ActionBarActivity {
 
 
         cards = new ArrayList<Card>();
-//        for (int i=0;i<50;i++){
+//        for (int i=0;i<1;i++){
 //
 //            getCurrentTime();
-//            Card card = CardTest(date_now, i);
+//            Card card = CardTest("", i);
+//            //Card card = CardTest(date_now, i);
 //            cards.add(card);
 //        }
 
@@ -137,6 +139,7 @@ public class MainActivity extends ActionBarActivity {
         getCurrentTime();
         Card card = CardTest(date_now, num);
         cards.add(card);
+        Collections.reverse(cards);
 
         mCardArrayAdapter = new CardArrayAdapter(getApplicationContext(),cards);
 
