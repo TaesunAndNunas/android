@@ -30,11 +30,11 @@ public class CustomMilkExpand extends CardExpand {
 
             //Set value in text views
             if (tx1 != null) {
-                tx1.setText(getContext().getString(R.string.demo_expand_customtitle1));
+                tx1.setText("30");
             }
 
             if (tx2 != null) {
-                tx2.setText(getContext().getString(R.string.demo_expand_customtitle2));
+                tx2.setText("직접수유시간");
             }
         }
     }

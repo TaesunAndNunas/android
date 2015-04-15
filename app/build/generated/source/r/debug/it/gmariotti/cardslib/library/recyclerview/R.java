@@ -241,12 +241,12 @@ public final class R {
 		public static final int card_thumbnail_image = 0x7f09005e;
 		public static final int card_thumbnail_layout = 0x7f090067;
 		public static final int list_cardId = 0x7f09006b;
-		public static final int list_card_undobar = 0x7f0900a6;
-		public static final int list_card_undobar_button = 0x7f0900a8;
-		public static final int list_card_undobar_message = 0x7f0900a7;
+		public static final int list_card_undobar = 0x7f0900aa;
+		public static final int list_card_undobar_button = 0x7f0900ac;
+		public static final int list_card_undobar_message = 0x7f0900ab;
 		public static final int normal = 0x7f09000a;
-		public static final int pressed = 0x7f0900e0;
-		public static final int selected = 0x7f0900e1;
+		public static final int pressed = 0x7f0900e4;
+		public static final int selected = 0x7f0900e5;
 		public static final int undobar = 0x7f090068;
 		public static final int undobar_button = 0x7f09006a;
 		public static final int undobar_message = 0x7f090069;

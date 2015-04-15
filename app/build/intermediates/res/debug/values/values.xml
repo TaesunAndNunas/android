@@ -388,8 +388,8 @@
     <string name="card_progressbar_cardwithlist_text">Loading data...</string>
     <!-- From: file:/Users/hyes/Desktop/ImFine_v03/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="demo_expand_customtitle1">쨩쨩쨩쟝t...</string>
-    <string name="demo_expand_customtitle2">뭘 어떻게 넣을지....?!</string>
+    <string name="demo_expand_customtitle1">""</string>
+    <string name="demo_expand_customtitle2">""</string>
     <string name="drawer_close">close</string>
     <string name="drawer_open">open</string>
     <!-- From: file:/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.cards/cardslib-core/2.0.1/res/values/values.xml -->

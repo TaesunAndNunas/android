@@ -24,46 +24,100 @@
     android:layout_height="100dp"
     android:id="@+id/inner_layout_sleep">
 
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-         >
+        >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="tv1"
-            android:id="@+id/sleep_tv1"
+            android:text="수면 시작"
+            android:textSize="10dp"
+            android:layout_gravity="center"
+            />
 
-            android:textSize="14dp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/sleep_tv1"
+                android:textSize="14dp"
+                android:layout_weight="7"
+                android:text="00 : 00"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수면 종료"
+            android:textSize="10dp"
+            android:layout_gravity="center"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textView42"
+                android:textSize="14dp"
+                android:layout_weight="7"
+                android:text="00:00"
+                android:gravity="center" />
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="sleep_tv2"
-            android:id="@+id/sleep_tv2"
-            android:textSize="12dp" />
-     </LinearLayout>
+            android:text="상세 메모"
+            android:textSize="10dp"
+            android:layout_gravity="center"
+            />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/sleep_tv2"
+                android:textSize="14dp"
+                android:layout_weight="7"
+                android:gravity="center_vertical|right" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>

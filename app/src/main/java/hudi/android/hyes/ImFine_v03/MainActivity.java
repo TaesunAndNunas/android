@@ -92,7 +92,6 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 createCard(1);
                 medicine_count_num += 1;
-                Toast.makeText(getApplicationContext(), "수유 새 카드 생성", Toast.LENGTH_SHORT).show();
             }
         });
 

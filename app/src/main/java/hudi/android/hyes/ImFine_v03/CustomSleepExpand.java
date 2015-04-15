@@ -30,7 +30,7 @@ public class CustomSleepExpand extends CardExpand {
 
             //Set value in text views
             if (tx1 != null) {
-                tx1.setText("customizing!!");
+                tx1.setText("00:00");
 //                getContext().getString(R.string.demo_expand_customtitle1)
             }
 

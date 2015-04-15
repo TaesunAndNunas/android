@@ -16,7 +16,7 @@
     <string name="memo_hint">상세 메모를 입력하세요.</string>
 
     <!-- Expand Example -->
-    <string name="demo_expand_customtitle1">쨩쨩쨩쟝t...</string>
-    <string name="demo_expand_customtitle2">뭘 어떻게 넣을지....?!</string>
+    <string name="demo_expand_customtitle1">""</string>
+    <string name="demo_expand_customtitle2">""</string>
 
 </resources>

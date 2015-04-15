@@ -30,12 +30,12 @@ public class CustomDiaperExpand extends CardExpand {
 
             //Set value in text views
             if (tx1 != null) {
-                tx1.setText("customizing!!");
+                tx1.setText("소변");
 //                getContext().getString(R.string.demo_expand_customtitle1)
             }
 
             if (tx2 != null) {
-                tx2.setText(getContext().getString(R.string.demo_expand_customtitle2));
+                tx2.setText("양호");
             }
         }
     }

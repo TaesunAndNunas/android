@@ -48,7 +48,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/diaper_tv1"
-                android:textSize="20dp"
+                android:textSize="14dp"
                 android:layout_weight="7"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="소변" />
@@ -80,7 +80,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/diaper_tv2"
-                android:textSize="20dp"
+                android:textSize="14dp"
                 android:layout_weight="7"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="양호" />
@@ -113,8 +113,8 @@
                 android:id="@+id/textView38"
                 android:layout_weight="7"
                 android:gravity="center_vertical|center_horizontal"
-                android:background="#ffadfd"
-                 />
+                android:background="#eeeeee"
+                android:layout_margin="2dp" />
         </LinearLayout>
     </LinearLayout>
 
