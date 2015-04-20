@@ -21,11 +21,11 @@
             android:paddingLeft="2dp">
 
             <ImageButton
-                android:src="@drawable/pill"
+                android:src="@drawable/white_medicine"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/imageButton"
-                android:scaleType="fitCenter"
+                android:scaleType="fitXY"
                 android:background="@drawable/medicine_round"
                 android:layout_gravity="center_horizontal" />
 
@@ -39,7 +39,7 @@
             android:gravity="bottom">
 
             <ImageButton
-                android:src="@drawable/sleep"
+                android:src="@drawable/white_sleep"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/imageButton2"
@@ -57,7 +57,7 @@
             android:gravity="bottom">
 
             <ImageButton
-                android:src="@drawable/diaper"
+                android:src="@drawable/white_diaper"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/imageButton3"
@@ -75,7 +75,7 @@
             android:gravity="bottom">
 
             <ImageButton
-                android:src="@drawable/milk"
+                android:src="@drawable/white_milk"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/imageButton4"

@@ -18,10 +18,10 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:src="@drawable/pill"
+                android:src="@drawable/white_medicine"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
-                android:id="@+id/imageButton"
+                android:id="@+id/widget_medicine"
                 android:padding="0sp"
                 android:scaleType="fitCenter"
                 android:background="@drawable/medicine_round"
@@ -63,10 +63,10 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:src="@drawable/sleep"
+                android:src="@drawable/white_sleep"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
-                android:id="@+id/imageButton2"
+                android:id="@+id/widget_sleep"
                 android:padding="0sp"
                 android:scaleType="fitCenter"
                 android:background="@drawable/sleep_round"
@@ -106,10 +106,10 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:src="@drawable/diaper"
+                android:src="@drawable/white_diaper"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
-                android:id="@+id/imageButton3"
+                android:id="@+id/widget_diaper"
                 android:padding="0sp"
                 android:scaleType="fitCenter"
                 android:background="@drawable/diaper_round"
@@ -149,10 +149,10 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:src="@drawable/milk"
+                android:src="@drawable/white_milk"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
-                android:id="@+id/imageButton4"
+                android:id="@+id/widget_milk"
                 android:padding="0sp"
                 android:scaleType="fitCenter"
                 android:background="@drawable/milk_round"

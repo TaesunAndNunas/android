@@ -1733,6 +1733,10 @@ containing a value of this type.
         public static final int undobar_button_focused=0x7f020070;
         public static final int undobar_button_pressed=0x7f020071;
         public static final int undobar_divider=0x7f020072;
+        public static final int white_diaper=0x7f020073;
+        public static final int white_medicine=0x7f020074;
+        public static final int white_milk=0x7f020075;
+        public static final int white_sleep=0x7f020076;
     }
     public static final class id {
         public static final int action_bar=0x7f090031;
@@ -1748,7 +1752,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09002e;
         public static final int action_mode_bar_stub=0x7f09002d;
         public static final int action_mode_close_button=0x7f090020;
-        public static final int action_settings=0x7f0900e6;
+        public static final int action_settings=0x7f0900ea;
         public static final int activity_chooser_view_content=0x7f090021;
         public static final int always=0x7f090016;
         public static final int beginning=0x7f090013;
@@ -1879,7 +1883,7 @@ containing a value of this type.
         public static final int never=0x7f090019;
         public static final int none=0x7f09000e;
         public static final int normal=0x7f09000a;
-        public static final int pressed=0x7f0900e4;
+        public static final int pressed=0x7f0900e8;
         public static final int profile_camera_btn=0x7f090054;
         public static final int profile_picture=0x7f090055;
         public static final int progress_circular=0x7f090005;
@@ -1899,7 +1903,7 @@ containing a value of this type.
         public static final int search_plate=0x7f090039;
         public static final int search_src_text=0x7f09003a;
         public static final int search_voice_btn=0x7f09003e;
-        public static final int selected=0x7f0900e5;
+        public static final int selected=0x7f0900e9;
         public static final int shortcut=0x7f09002a;
         public static final int showCustom=0x7f09000f;
         public static final int showHome=0x7f090010;
@@ -1964,6 +1968,10 @@ containing a value of this type.
         public static final int useLogo=0x7f090012;
         public static final int welcome_msg1=0x7f09003f;
         public static final int welcome_msg2=0x7f090040;
+        public static final int widget_diaper=0x7f0900e6;
+        public static final int widget_medicine=0x7f0900e4;
+        public static final int widget_milk=0x7f0900e7;
+        public static final int widget_sleep=0x7f0900e5;
         public static final int withText=0x7f09001a;
         public static final int wrap_content=0x7f09001d;
     }

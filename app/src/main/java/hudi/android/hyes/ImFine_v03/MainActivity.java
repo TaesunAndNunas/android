@@ -22,7 +22,6 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 
 import it.gmariotti.cardslib.library.internal.Card;
@@ -49,7 +48,7 @@ public class MainActivity extends ActionBarActivity {
     private LinearLayout innerLayout_milk;
     private LinearLayout mainLayout;
     private RelativeLayout contentLayout;
-    private ArrayList<Card> cards;
+    private ArrayList<Card> cards, reverse_cards;
     private CardArrayAdapter mCardArrayAdapter;
     private CardListView listView;
     private TextView medicineTime;
@@ -136,12 +135,20 @@ public class MainActivity extends ActionBarActivity {
 
     private void createCard(int num){
 
+       // Collections.reverse(cards);
+
         getCurrentTime();
         Card card = CardTest(date_now, num);
         cards.add(card);
-        Collections.reverse(cards);
 
-        mCardArrayAdapter = new CardArrayAdapter(getApplicationContext(),cards);
+        reverse_cards = new ArrayList<Card>();
+       // reverse_cards = Collections.reverse(cards);
+
+        for(int i=cards.size() -1; i>=0; i--){
+            reverse_cards.add(cards.get(i));
+        }
+
+        mCardArrayAdapter = new CardArrayAdapter(getApplicationContext(),reverse_cards);
 
         listView = (CardListView) findViewById(R.id.cardlist_expand);
             if (listView!=null){
