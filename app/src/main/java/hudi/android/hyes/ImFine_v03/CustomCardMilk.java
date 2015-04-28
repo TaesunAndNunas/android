@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -24,9 +25,21 @@ public class CustomCardMilk extends Card {
     protected ImageView colorBar;
     protected TextView time;
     private Context mContext;
+    SimpleDateFormat curTime = new SimpleDateFormat("a hh:mm:ss");
 
     public CustomCardMilk(Context context) {
         super(context);
+    }
+
+
+    public CustomCardMilk(Context context, int innerLayout, String date) throws ParseException {
+        super(context, innerLayout);
+        mContext= context;
+        currentTimeMillis = System.currentTimeMillis();
+
+        this.date = curTime.parse(date);
+        init();
+
     }
 
     public CustomCardMilk(Context context, int innerLayout) {
@@ -67,7 +80,7 @@ public class CustomCardMilk extends Card {
 
         colorBar.setBackgroundColor(Color.parseColor("#FF6D4E"));
 
-        SimpleDateFormat curTime = new SimpleDateFormat("a hh:mm:ss");
+        //SimpleDateFormat curTime = new SimpleDateFormat("a hh:mm:ss");
         String time_now = curTime.format(date);
 
         if (time!=null)

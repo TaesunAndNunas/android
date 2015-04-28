@@ -405,7 +405,11 @@
     <!-- From: file:/Users/hyes/Desktop/ImFine_v03/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="memo_hint">상세 메모를 입력하세요.</string>
+    <string name="pref_article_number">ArticleNumber</string>
+    <string name="pref_name">ImFinePref</string>
     <string name="register_btn">가입하기</string>
+    <string name="server_url">ServerURL</string>
+    <string name="server_url_value">http://192.168.56.1:8080</string>
     <string name="title_activity_main_activity2">MainActivity2</string>
     <string name="welcome_msg1">환영합니다!</string>
     <string name="welcome_msg2">아직 회원이 아니신가요?</string>

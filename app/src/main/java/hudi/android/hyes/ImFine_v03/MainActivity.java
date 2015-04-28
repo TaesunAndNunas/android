@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +20,10 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import org.apache.http.Header;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -56,6 +61,7 @@ public class MainActivity extends ActionBarActivity {
     private TextView diaperTime;
     private TextView milkTime;
     private int medicine_count_num = 1, sleep_count_num = 1, diaper_count_num = 1, milk_count_num =1;
+    private Dao dao;
 
 
     @Override
@@ -76,6 +82,7 @@ public class MainActivity extends ActionBarActivity {
         win.addContentView(linear2, layoutParams2);
 
 
+        dao = new Dao(getApplicationContext());
 
         cards = new ArrayList<Card>();
 //        for (int i=0;i<1;i++){
@@ -133,13 +140,16 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-    private void createCard(int num){
+    public void createCard(int num){
 
        // Collections.reverse(cards);
 
         getCurrentTime();
         Card card = CardTest(date_now, num);
         cards.add(card);
+
+        //카드 생성 후 서버연결하고 디비에 저장!
+
 
         reverse_cards = new ArrayList<Card>();
        // reverse_cards = Collections.reverse(cards);
@@ -211,7 +221,7 @@ public class MainActivity extends ActionBarActivity {
     /**
      * This method builds a standard header with a custom expand/collpase
      */
-    private Card CardTest(String titleHeader, int i) {
+    public Card CardTest(String titleHeader, int i) {
 
         long currentTimeMillis = System.currentTimeMillis();
         Date date = new Date(currentTimeMillis);
@@ -231,11 +241,26 @@ public class MainActivity extends ActionBarActivity {
         innerLayout_milk = (LinearLayout) findViewById(R.id.inner_layout_milk);
         contentLayout = (RelativeLayout) findViewById(R.id.contentLayout);
 
-        Card card;
+        final Card card;
 
         if(i == 1) {
 
             card = new CustomCardMedicine(getApplicationContext(), R.layout.inner_content);
+            dao.insertCard(card);
+            ProxyUP.uploadCard((CustomCardMedicine) card, new AsyncHttpResponseHandler() {
+                @Override
+                public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                    Log.e("uploadCard", "success");
+
+                    Toast.makeText(getApplicationContext(), "onSuccess", Toast.LENGTH_SHORT).show();
+
+                }
+
+                @Override
+                public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                    Log.e("uploadArticle", "fail: " + statusCode);
+                }
+            });
             medicineTime.setText(now_text);
             TextView count = (TextView)findViewById(R.id.medicineCount);
             String count_total = Integer.toString(medicine_count_num);

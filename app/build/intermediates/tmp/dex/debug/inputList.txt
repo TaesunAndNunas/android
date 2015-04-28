@@ -8,6 +8,7 @@
 /Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-ab988265f82008e82d4f6dfed62e0288c1869b3d.jar
 /Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-89458b763b70229cc3d63636816b8c7db6d8e2f6.jar
 /Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/lib-manipulation-3.1.0-fea6213a7e8cb87ccd2642bdf06b6b9a5cdd7f78.jar
+/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.5-7135bb463dae47cde3b1e9e6063a6f84c9c85bf8.jar
 /Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/library-2.4.0-38db31e8638dbe0da0b44b9719c225d14f7650b7.jar
 /Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-ecaf73e807f4238634e2e04033727347c6dcb649.jar
 /Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-3b9b313e80260d64e47552eda7de57679a6050fd.jar

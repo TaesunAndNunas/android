@@ -19,4 +19,9 @@
     <string name="demo_expand_customtitle1">""</string>
     <string name="demo_expand_customtitle2">""</string>
 
+    <string name="pref_name">ImFinePref</string>
+    <string name="server_url_value">http://192.168.56.1:8080</string>
+    <string name="server_url">ServerURL</string>
+    <string name="pref_article_number">ArticleNumber</string>
+
 </resources>

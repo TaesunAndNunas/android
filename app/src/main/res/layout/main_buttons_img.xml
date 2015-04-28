@@ -21,16 +21,16 @@
             android:paddingLeft="2dp">
 
             <ImageButton
-                android:src="@drawable/white_medicine"
+                android:src="@drawable/medicine2_white"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/imageButton"
-                android:scaleType="fitXY"
+                android:scaleType="centerInside"
                 android:background="@drawable/medicine_round"
                 android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
-
+<!-- android:scaleType="fitCenter"-->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="0dp"
@@ -39,11 +39,11 @@
             android:gravity="bottom">
 
             <ImageButton
-                android:src="@drawable/white_sleep"
+                android:src="@drawable/sleep2_white"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/imageButton2"
-                android:scaleType="fitCenter"
+                android:scaleType="centerInside"
                 android:background="@drawable/sleep_round"
                 android:layout_gravity="center_horizontal" />
 
@@ -57,11 +57,11 @@
             android:gravity="bottom">
 
             <ImageButton
-                android:src="@drawable/white_diaper"
+                android:src="@drawable/diaper2_white"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/imageButton3"
-                android:scaleType="fitCenter"
+                android:scaleType="centerInside"
                 android:background="@drawable/diaper_round"
                 android:layout_gravity="center_horizontal" />
 
@@ -75,11 +75,11 @@
             android:gravity="bottom">
 
             <ImageButton
-                android:src="@drawable/white_milk"
+                android:src="@drawable/milk2_white"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:id="@+id/imageButton4"
-                android:scaleType="fitCenter"
+                android:scaleType="center"
                 android:background="@drawable/milk_round"
                 android:layout_gravity="center_horizontal" />
 

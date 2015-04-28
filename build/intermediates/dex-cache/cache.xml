@@ -65,6 +65,13 @@
         <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/classes-7c1a8255cc06b42b775e558335ba53466fb14a54.jar" />
     </item>
     <item
+        jar="/Users/hyes/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.5/77bf7cacf9cefe19dc105e5425d2eb1bb5285881/android-async-http-1.4.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="77bf7cacf9cefe19dc105e5425d2eb1bb5285881">
+        <dex dex="/Users/hyes/Desktop/ImFine_v03/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.5-7135bb463dae47cde3b1e9e6063a6f84c9c85bf8.jar" />
+    </item>
+    <item
         jar="/Users/hyes/Desktop/201403NEXT/Android/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"

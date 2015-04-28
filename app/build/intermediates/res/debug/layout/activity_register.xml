@@ -122,12 +122,12 @@
             android:textSize="20dp" />
 
         <EditText
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="date"
-            android:hint="내용을 입력해주세요."
-            android:id="@+id/editText6"
-            android:layout_weight="3" />
+            android:ems="10"
+            android:id="@+id/editText20"
+            android:layout_weight="1" />
 
     </LinearLayout>
 
