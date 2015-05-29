@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ImFine_04</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+
+    <!--detail화면 관련-->
+    <string name="memo_hint">상세 메모를 입력하세요.</string>
+</resources>

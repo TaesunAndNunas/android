@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="test.chart.hyes.imfine_04" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!--<receiver-->
+            <!--android:enabled="true"-->
+            <!--android:exported="false"-->
+            <!--android:label="Device Event Receiver"-->
+            <!--android:name="test.chart.hyes.imfine_04.DeviceEventReceiver">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.DATE_CHANGED"/>-->
+
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <receiver android:name="test.chart.hyes.imfine_04.Widget" android:label="widget">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_configuration"/>
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.record.widget.A"/>
+                <action android:name="com.record.widget.B"/>
+                <action android:name="com.record.widget.C"/>
+                <action android:name="com.record.widget.D"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name=".Medicine"/>
+        <activity android:name=".Sleep"/>
+        <activity android:name=".Feed"/>
+        <activity android:name=".Diaper"/>
+
+
+    </application>
+
+</manifest>
