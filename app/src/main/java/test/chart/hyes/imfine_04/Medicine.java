@@ -12,6 +12,14 @@ import android.widget.TextView;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
+
 /**
  * Created by hyes on 2015. 5. 20..
  */
@@ -161,6 +169,45 @@ public class Medicine extends ActionBarActivity{
                 dao.updateDetail(String.valueOf(jsonObj), id);
 
                 Log.i("test",String.valueOf(jsonObj) );
+
+
+                Proxy proxy = new Proxy();
+
+                //int id = dao.getRecentID();
+                // Log.i("test", id+"");
+
+                proxy.updateDetail(id, "Ksksk", String.valueOf(jsonObj),
+                        new Callback<Response>(){
+                            @Override
+                            public void success(Response response, Response response2) {
+                                BufferedReader reader = null;
+                                StringBuilder sb = new StringBuilder();
+                                try{
+                                    reader = new BufferedReader(new InputStreamReader(response.getBody().in()));
+                                    String line;
+                                    try{
+                                        while((line = reader.readLine()) != null){
+                                            sb.append(line);
+                                        }
+                                    }catch (Exception e){
+                                        e.printStackTrace();
+                                    }
+                                }catch(Exception e){
+                                    e.printStackTrace();
+                                }
+                                String ok = sb.toString();
+                                Log.i("test", ok);
+                            }
+
+                            @Override
+                            public void failure(RetrofitError error) {
+                                Log.e("error",error.toString());
+
+                            }
+                        }
+                );
+
+
 
                 finish();
 

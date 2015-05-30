@@ -23,6 +23,8 @@ public class EventAdapter extends ArrayAdapter<Item>{
     private static final int TYPE_SEPARATOR = 1;
 
 
+
+
     public enum RowType {
         LIST_ITEM, HEADER_ITEM
     }
@@ -46,6 +48,11 @@ public class EventAdapter extends ArrayAdapter<Item>{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder = null;
+        TextView text1 = null;
+        TextView text2 = null;
+        TextView text3 = null;
+        TextView text4 = null;
+
 
         int rowType = getItemViewType(position);
         View View;
@@ -87,20 +94,21 @@ public class EventAdapter extends ArrayAdapter<Item>{
                         holder.View = getItem(position).getView(mInflater, convertView);
                     }
 
-                    TextView text1 = (TextView) convertView.findViewById(R.id.type_tv);
-                    TextView text2 = (TextView) convertView.findViewById(R.id.count_tv);
-                    TextView text3 = (TextView) convertView.findViewById(R.id.date_tv);
-                    TextView text4 = (TextView) convertView.findViewById(R.id.detail_tv);
+                    text1 = (TextView) convertView.findViewById(R.id.type_tv);
+                    text2 = (TextView) convertView.findViewById(R.id.count_tv);
+                    text3 = (TextView) convertView.findViewById(R.id.date_tv);
+                    text4 = (TextView) convertView.findViewById(R.id.detail_tv);
+
                     text1.setText(((Event)getItem(position)).getType());
                     text2.setText(((Event)getItem(position)).getCount()+"");
                     text3.setText(((Event)getItem(position)).getTime());
 
-//                    if(((Event)getItem(position)).getDetail() == null){
-//                        text4.setText("");
-//                    }else {
-//                        text4.setText(((Event) getItem(position)).getDetail());
-//                        Log.i("test", ((Event) getItem(position)).getDetail().toString());
-//                    }
+                    if(((Event)getItem(position)).getDetail() == null){
+                        text4.setText("");
+                    }else {
+                        text4.setText(((Event) getItem(position)).getDetail());
+                        Log.i("test", ((Event) getItem(position)).getDetail().toString());
+                    }
 
 
 //                    if(((Event)getItem(position)).getType() == "medicine"){

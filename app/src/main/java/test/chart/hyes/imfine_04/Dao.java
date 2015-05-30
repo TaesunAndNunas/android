@@ -242,6 +242,29 @@ public class Dao {
         return count;
     }
 
+    public int getRecentID(String type, int count, String time){
+
+        String sql = "SELECT id FROM Events where type = '" + type + "' and count =  '" + count + "' and time = '" + time + "';";
+        Log.i("test", sql);
+        int id = 0;
+
+        Cursor cursor = null;
+        try {
+            cursor = database.rawQuery(sql, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        while(cursor.moveToNext()){
+
+            id = cursor.getInt(0);
+
+        }
+        cursor.close();
+
+        return id;
+    }
+
 
     public void stop(){
         database.close();

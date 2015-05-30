@@ -152,7 +152,12 @@ public class MainActivity extends ListActivity {
             Event event = new Event("medicine", m_count, temp_time);
             dao.eventInsert("medicine", m_count, temp_time);
             items.add(event);
-            proxy.send(event,
+            int id = dao.getRecentID("medicine", m_count, temp_time);
+
+            Log.i("test", "recent: "+id+"");
+
+            proxy.send(id, "Ksksk", event,
+
                     new Callback<Response>(){
                         @Override
                         public void success(Response response, Response response2) {
@@ -196,6 +201,39 @@ public class MainActivity extends ListActivity {
             Event event = new Event("sleep", s_count, temp_time);
             dao.eventInsert("sleep", s_count, temp_time);
             items.add(event);
+            int id = dao.getRecentID("sleep", s_count, temp_time);
+
+            proxy.send(id, "Ksksk", event,
+                    new Callback<Response>(){
+                        @Override
+                        public void success(Response response, Response response2) {
+                            BufferedReader reader = null;
+                            StringBuilder sb = new StringBuilder();
+                            try{
+                                reader = new BufferedReader(new InputStreamReader(response.getBody().in()));
+                                String line;
+                                try{
+                                    while((line = reader.readLine()) != null){
+                                        sb.append(line);
+                                    }
+                                }catch (Exception e){
+                                    e.printStackTrace();
+                                }
+                            }catch(Exception e){
+                                e.printStackTrace();
+                            }
+                            String ok = sb.toString();
+                            Log.i("test", ok);
+                        }
+
+                        @Override
+                        public void failure(RetrofitError error) {
+                            Log.e("error",error.toString());
+
+                        }
+                    }
+            );
+
 
         }else  if(num == 2) {
 
@@ -210,6 +248,39 @@ public class MainActivity extends ListActivity {
             Event event = new Event("diaper", d_count, temp_time);
             dao.eventInsert("diaper", d_count, temp_time);
             items.add(event);
+            int id = dao.getRecentID("sleep", s_count, temp_time);
+
+            proxy.send(id, "Ksksk", event,
+                    new Callback<Response>(){
+                        @Override
+                        public void success(Response response, Response response2) {
+                            BufferedReader reader = null;
+                            StringBuilder sb = new StringBuilder();
+                            try{
+                                reader = new BufferedReader(new InputStreamReader(response.getBody().in()));
+                                String line;
+                                try{
+                                    while((line = reader.readLine()) != null){
+                                        sb.append(line);
+                                    }
+                                }catch (Exception e){
+                                    e.printStackTrace();
+                                }
+                            }catch(Exception e){
+                                e.printStackTrace();
+                            }
+                            String ok = sb.toString();
+                            Log.i("test", ok);
+                        }
+
+                        @Override
+                        public void failure(RetrofitError error) {
+                            Log.e("error",error.toString());
+
+                        }
+                    }
+            );
+
 
         }else if(num == 3){
             String temp_time = timestamp();
@@ -220,6 +291,39 @@ public class MainActivity extends ListActivity {
             Event event = new Event("feed", f_count, temp_time);
             dao.eventInsert("feed", f_count, temp_time);
             items.add(event);
+
+            int id = dao.getRecentID("sleep", s_count, temp_time);
+
+            proxy.send(id, "Ksksk", event,
+                    new Callback<Response>(){
+                        @Override
+                        public void success(Response response, Response response2) {
+                            BufferedReader reader = null;
+                            StringBuilder sb = new StringBuilder();
+                            try{
+                                reader = new BufferedReader(new InputStreamReader(response.getBody().in()));
+                                String line;
+                                try{
+                                    while((line = reader.readLine()) != null){
+                                        sb.append(line);
+                                    }
+                                }catch (Exception e){
+                                    e.printStackTrace();
+                                }
+                            }catch(Exception e){
+                                e.printStackTrace();
+                            }
+                            String ok = sb.toString();
+                            Log.i("test", ok);
+                        }
+
+                        @Override
+                        public void failure(RetrofitError error) {
+                            Log.e("error",error.toString());
+
+                        }
+                    }
+            );
 
         }
 
@@ -258,6 +362,12 @@ public class MainActivity extends ListActivity {
             d_count = 0;
             s_count = 0;
             f_count = 0;
+
+            m_cnt_tv.setText(m_count+"");
+            d_cnt_tv.setText(d_count+"");
+            s_cnt_tv.setText(s_count+"");
+            f_cnt_tv.setText(f_count+"");
+
 
             listView();
             Log.i("test", "new Header and zero set");
