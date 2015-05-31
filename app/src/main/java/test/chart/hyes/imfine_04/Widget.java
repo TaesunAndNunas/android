@@ -248,7 +248,59 @@ public class Widget extends AppWidgetProvider {
 //        }
     }
 
+    private void checkSeparator() {
 
+        Dao dao = new Dao(context);
+        SimpleDateFormat timestampDate = new SimpleDateFormat("yyyyMMdd");
+        String date = timestampDate.format(new Date()).toString();
+
+        Log.i("test", "now date: " + date);
+        String temp_comparingDate =  dao.getRecentDate();
+        String comparingDate =null;
+        MainActivity main = new MainActivity();
+        if(temp_comparingDate != null) {
+            comparingDate = temp_comparingDate.substring(0, 8);
+            Log.i("test", "comparing: "+comparingDate);
+        }
+
+        if(temp_comparingDate == null){
+            Header header = new Header(date);
+
+
+            main.addHeaderItems(header);
+            //items.add(header);
+            dao.eventInsert("separator");
+            Log.i("test", "null condition");
+
+        }else if(!comparingDate.equals(date)){
+
+
+            Header header = new Header(date);
+            main.addHeaderItems(header);
+            dao.eventInsert("separator");
+            RemoteViews rv = new RemoteViews(context.getPackageName(), R.layout.widget);
+
+            m = 0;
+            s = 0;
+            f = 0;
+            d = 0;
+
+            rv.setTextViewText(R.id.medicine_count, m+"");
+            rv.setTextViewText(R.id.medicine_time, "");
+            rv.setTextViewText(R.id.sleep_count, s + "");
+            rv.setTextViewText(R.id.sleep_time, "");
+
+            rv.setTextViewText(R.id.diaper_count, d + "");
+            rv.setTextViewText(R.id.diaper_time, "");
+            rv.setTextViewText(R.id.milk_count, f + "");
+            rv.setTextViewText(R.id.milk_time, "");
+
+
+            Log.i("test", "new Header and zero set");
+        }else{
+
+        }
+    }
 
 
     private String timestamp(){

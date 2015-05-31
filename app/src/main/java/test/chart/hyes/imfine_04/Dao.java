@@ -229,6 +229,7 @@ public class Dao {
     public int getDailyCount(String type) {
 
         int count = 0;
+        String date=null;
 
         String sql = "SELECT * FROM Events where type = '" + type + "' ORDER BY date desc limit 1;";
         Log.i("test", "Daily count: " + sql);
@@ -237,10 +238,20 @@ public class Dao {
 
         while (cursor.moveToNext()) {
             count = cursor.getInt(2);
+//            date = cursor.getString(4);
         }
 
+//        SimpleDateFormat timestampDate = new SimpleDateFormat("yyyyMMdd");
+//        String comp_date = timestampDate.format(new Date()).toString();
+
         cursor.close();
+
+//        if(!date.substring(0,8).equals(comp_date)){
+//            count = 0;
+//        }
         Log.i("test", "Daily count result: " + count);
+
+
         return count;
     }
 
@@ -248,6 +259,7 @@ public class Dao {
     public String getRecentTime(String type) {
 
         String time = "";
+        String date=null;
 
         String sql = "SELECT * FROM Events where type = '" + type + "' ORDER BY date desc limit 1;";
         Log.i("test", "Daily count: " + sql);
@@ -258,7 +270,14 @@ public class Dao {
             time = cursor.getString(3);
         }
 
+
+//        SimpleDateFormat timestampDate = new SimpleDateFormat("yyyyMMdd");
+//        String comp_date = timestampDate.format(new Date()).toString();
+
         cursor.close();
+//        if(!date.substring(0,8).equals(comp_date)){
+//            time = null;
+//        }
         Log.i("test", "widget time result: " + time);
         return time;
     }

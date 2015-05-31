@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -409,7 +408,12 @@ public class MainActivity extends ListActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (((Item) parent.getAdapter().getItem(position)).getViewType() == EventAdapter.RowType.HEADER_ITEM.ordinal()) {
-                    Toast.makeText(getApplicationContext(), "graph? maybe..", Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(getApplicationContext(), "graph? maybe..", Toast.LENGTH_SHORT).show();
+
+
+                    Intent intent = new Intent(MainActivity.this, DailyGraph.class);
+                    startActivity(intent);
+
                 }
                 if (((Item) parent.getAdapter().getItem(position)).getViewType() == EventAdapter.RowType.LIST_ITEM.ordinal()) {
 
@@ -498,10 +502,6 @@ public class MainActivity extends ListActivity {
         d_time.setText(d_t);
         s_time.setText(s_t);
         f_time.setText(f_t);
-
-
-
-
 
         refreshData();
     }
