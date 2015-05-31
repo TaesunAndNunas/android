@@ -34,7 +34,7 @@
             >
 
             <ImageButton
-                android:src="@drawable/medicine2_white"
+                android:src="@drawable/white_medicine"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
                 android:id="@+id/imageButton"
@@ -129,7 +129,7 @@
             >
 
             <ImageButton
-                android:src="@drawable/diaper2_white"
+                android:src="@drawable/white_diaper"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
                 android:id="@+id/imageButton3"
@@ -172,7 +172,7 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:src="@drawable/milk2_white"
+                android:src="@drawable/white_milk"
                 android:layout_width="80dp"
                 android:layout_height="0dp"
                 android:id="@+id/imageButton4"

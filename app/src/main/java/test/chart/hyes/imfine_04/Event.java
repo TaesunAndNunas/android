@@ -57,7 +57,17 @@ public class Event implements Item{
 
     @Override
     public View getView(LayoutInflater inflater, View convertView) {
+
+
+
+
         View view;
+
+
+
+
+
+
         if (convertView == null) {
             view = (View) inflater.inflate(R.layout.event_row, null);
             // Do some initialization
