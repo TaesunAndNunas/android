@@ -145,11 +145,11 @@ public class Dao {
             if(type.equals("separator")){
                 Header header = new Header(date);
                 items.add(header);
-                Log.i("test", "seperator enter!!!");
+               // Log.i("test", "seperator enter!!!");
             }else{
                 Event event = new Event(type, count, time, date, detail);
                 items.add(event);
-                Log.i("test", "event enter!!!");
+               // Log.i("test", "event enter!!!");
             }
         }
 
@@ -230,16 +230,37 @@ public class Dao {
 
         int count = 0;
 
-        String sql = "SELECT * FROM Events where type = '" + type + "' ORDER BY id desc limit 1;";
+        String sql = "SELECT * FROM Events where type = '" + type + "' ORDER BY date desc limit 1;";
+        Log.i("test", "Daily count: " + sql);
         Cursor cursor = database.rawQuery(sql, null);
+
 
         while (cursor.moveToNext()) {
             count = cursor.getInt(2);
         }
 
         cursor.close();
-
+        Log.i("test", "Daily count result: " + count);
         return count;
+    }
+
+
+    public String getRecentTime(String type) {
+
+        String time = "";
+
+        String sql = "SELECT * FROM Events where type = '" + type + "' ORDER BY date desc limit 1;";
+        Log.i("test", "Daily count: " + sql);
+        Cursor cursor = database.rawQuery(sql, null);
+
+
+        while (cursor.moveToNext()) {
+            time = cursor.getString(3);
+        }
+
+        cursor.close();
+        Log.i("test", "widget time result: " + time);
+        return time;
     }
 
     public int getRecentID(String type, int count, String time){

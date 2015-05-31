@@ -56,7 +56,7 @@ public class EventAdapter extends ArrayAdapter<Item>{
 
         int rowType = getItemViewType(position);
         View View;
-        Log.i("test", "adapter getview..." + ((convertView==null)? "null":convertView));
+       // Log.i("test", "adapter getview..." + ((convertView==null)? "null":convertView));
 
         if (convertView == null) {
             holder = new ViewHolder();
@@ -111,26 +111,6 @@ public class EventAdapter extends ArrayAdapter<Item>{
                     }
 
 
-//                    if(((Event)getItem(position)).getType() == "medicine"){
-//                        Bitmap bitmap = BitmapFactory.decodeResource(convertView.getResources(), R.drawable.pill);
-//                        bScaled = Bitmap.createScaledBitmap(bitmap, 60, 60, true);
-//                        imageView.setImageBitmap(bScaled);
-//                    }else if(((Event)getItem(position)).getType() == "sleep"){
-//                        Bitmap bitmap = BitmapFactory.decodeResource(convertView.getResources(), R.drawable.sleep);
-//                        bScaled = Bitmap.createScaledBitmap(bitmap, 60, 60, true);
-//                        imageView.setImageBitmap(bScaled);
-//                    }
-//                    else if(((Event)getItem(position)).getType() == "diaper"){
-//                        Bitmap bitmap = BitmapFactory.decodeResource(convertView.getResources(), R.drawable.diaper);
-//                        bScaled = Bitmap.createScaledBitmap(bitmap, 60, 60, true);
-//                        imageView.setImageBitmap(bScaled);
-//                    }
-//                    else if(((Event)getItem(position)).getType() == "feed"){
-//                        Bitmap bitmap = BitmapFactory.decodeResource(convertView.getResources(), R.drawable.milk);
-//                        bScaled = Bitmap.createScaledBitmap(bitmap, 60, 60, true);
-//                        imageView.setImageBitmap(bScaled);
-//                    }
-
                     break;
 
                 case TYPE_SEPARATOR:
@@ -163,7 +143,8 @@ public class EventAdapter extends ArrayAdapter<Item>{
             {
                 holder = (ViewHolder) convertView.getTag();
             }
-            return convertView;
+
+                    return convertView;
 
         }
 

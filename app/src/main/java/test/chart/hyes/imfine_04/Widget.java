@@ -1,6 +1,5 @@
 package test.chart.hyes.imfine_04;
 
-import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
@@ -28,14 +27,14 @@ public class Widget extends AppWidgetProvider {
     private Context context;
     private ComponentName recordWidget;
     private RemoteViews views = null;
-    private String time_changed;
+    private String time_changed, m_t, s_t, f_t, d_t;
 
-    private int count_m, count_d, count_f, count_s;
+    private int m,s,f,d;
 
 
     @Override
     public void onEnabled(Context context) {
-        Log.i(TAG, "======================= onEnabled() =======================");
+        Log.i("test", "======================= onEnabled() =======================");
         super.onEnabled(context);
     }
 
@@ -142,63 +141,78 @@ public class Widget extends AppWidgetProvider {
         RemoteViews rv = new RemoteViews(context.getPackageName(), R.layout.widget);
         String action = intent.getAction();
         Log.d(TAG, "onReceive() action = " + action);
+        Dao dao = new Dao(context);
+        m = dao.getDailyCount("medicine");
+        s = dao.getDailyCount("sleep");
+        f = dao.getDailyCount("feed");
+        d = dao.getDailyCount("diaper");
+        Log.i("test", "from server: " + m+","+ s + ",");
+
+        m_t = dao.getRecentTime("medicine");
+        s_t = dao.getRecentTime("sleep");
+        d_t = dao.getRecentTime("diaper");
+        f_t = dao.getRecentTime("feed");
+
+
+        rv.setTextViewText(R.id.medicine_count, m+"");
+        rv.setTextViewText(R.id.medicine_time, m_t);
+        rv.setTextViewText(R.id.sleep_count, s + "");
+        rv.setTextViewText(R.id.sleep_time, s_t);
+        rv.setTextViewText(R.id.diaper_count, d + "");
+        rv.setTextViewText(R.id.diaper_time, d_t);
+        rv.setTextViewText(R.id.milk_count, f + "");
+        rv.setTextViewText(R.id.milk_time, f_t);
 
 
         if(action.equals(ACTION_A)){
-            Log.e("widget","aaaa");
-
 
             try{
-                time_changed = timestamp();
-                Log.i("test", count_m+"");
-                count_m += 1;
-                Log.i("test", count_m+"");
+                m_t = timestamp();
+                m += 1;
+                dao.eventInsert("medicine", m, m_t);
 
-                Dao dao = new Dao(context);
-                dao.eventInsert("medicine", count_m, time_changed);
-            //    rv.setTextViewText(R.id.medicine_count, count_m + "");
-                rv.setTextViewText(R.id.medicine_time, time_changed);
+                rv.setTextViewText(R.id.medicine_count, m+"");
+                rv.setTextViewText(R.id.medicine_time, m_t);
             }catch (Exception e) {
-                // TODO: handle exception
+
             }
+
         }else if(action.equals(ACTION_B)){
             Log.e("widget","bbb");
             try{
-                time_changed = timestamp();
-                count_s += 1;
+                s_t = timestamp();
+                s += 1;
 
-                Dao dao = new Dao(context);
-                dao.eventInsert("sleep", count_m, time_changed);
-              //  rv.setTextViewText(R.id.sleep_count, count_s + "");
-                rv.setTextViewText(R.id.sleep_time, time_changed);
+                dao.eventInsert("sleep", s, s_t);
+                rv.setTextViewText(R.id.sleep_count, s + "");
+                rv.setTextViewText(R.id.sleep_time, s_t);
             }catch (Exception e) {
-                // TODO: handle exception
+
             }
+
         }else if(action.equals(ACTION_C)){
 
             try{
-                time_changed = timestamp();
-                count_d += 1;
+                d_t = timestamp();
+                d += 1;
 
-                Dao dao = new Dao(context);
-                dao.eventInsert("diaper", count_d, time_changed);
-             //   rv.setTextViewText(R.id.diaper_count, count_d + "");
-                rv.setTextViewText(R.id.diaper_time, time_changed);
+                dao.eventInsert("diaper", d, d_t);
+                rv.setTextViewText(R.id.diaper_count, d + "");
+                rv.setTextViewText(R.id.diaper_time, d_t);
             }catch (Exception e) {
-                // TODO: handle exception
+
             }
         }else if(action.equals(ACTION_D)){
 
             try{
-                time_changed = timestamp();
-                count_f += 1;
+                f_t = timestamp();
+                f += 1;
 
-                Dao dao = new Dao(context);
-                dao.eventInsert("feed", count_f, time_changed);
-            //    rv.setTextViewText(R.id.milk_count, count_f + "");
-                rv.setTextViewText(R.id.milk_time, time_changed);
+                dao.eventInsert("feed", f, f_t);
+                rv.setTextViewText(R.id.milk_count, f + "");
+                rv.setTextViewText(R.id.milk_time, f_t);
             }catch (Exception e) {
-                // TODO: handle exception
+
             }
         }
 
@@ -234,28 +248,8 @@ public class Widget extends AppWidgetProvider {
 //        }
     }
 
-    /**
-     * Activity 호출 (Intent.FLAG_ACTIVITY_NEW_TASK)
-     */
-    private void callActivity(Context context){
-        Log.d(TAG, "callActivity()");
-        Intent intent = new Intent("arabiannight.tistory.com.widget.CALL_ACTIVITY");
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-    }
 
-    /**
-     * Dialog Activity 호출 (PendingIntent)
-     */
-    private void createDialog(Context context){
-        Log.d(TAG, "createDialog()");
-        AlarmManager alarmManager = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
 
-        Intent Intent = new Intent("arabiannight.tistory.com.widget.CALL_PROGRESSDIALOG");
-        PendingIntent pIntent = PendingIntent.getActivity(context, 0, Intent, 0);
-
-        alarmManager.set(AlarmManager.RTC, System.currentTimeMillis(), pIntent);
-    }
 
     private String timestamp(){
 

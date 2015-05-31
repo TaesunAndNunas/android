@@ -41,7 +41,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/medicine_count" />
+                    android:id="@+id/medicine_count"
+                    android:text="0" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -52,7 +53,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12:00"
                     android:id="@+id/medicine_time" />
             </LinearLayout>
         </LinearLayout>
@@ -83,7 +83,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/sleep_count" />
+                    android:id="@+id/sleep_count"
+                    android:text="0" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -94,7 +95,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12:00"
                     android:id="@+id/sleep_time" />
             </LinearLayout>
         </LinearLayout>
@@ -126,7 +126,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/diaper_count" />
+                    android:id="@+id/diaper_count"
+                    android:text="0" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -137,7 +138,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12:00"
                     android:id="@+id/diaper_time" />
             </LinearLayout>
         </LinearLayout>
@@ -168,7 +168,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/milk_count" />
+                    android:id="@+id/milk_count"
+                    android:text="0" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -179,7 +180,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12:00"
                     android:id="@+id/milk_time" />
             </LinearLayout>
         </LinearLayout>

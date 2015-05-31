@@ -29,7 +29,7 @@ public class MainActivity extends ListActivity {
 
     private ImageButton medicine, sleep, feed, diaper;
     public List<Item> items, reverse_item;
-    public String time_changed;
+    public String time_changed, m_t, s_t, d_t, f_t;
     public int idx;
     private int m_count, d_count, f_count, s_count;
  //   private EventAdapter adapter;
@@ -76,6 +76,7 @@ public class MainActivity extends ListActivity {
         s_cnt_tv.setText(s_count + "");
         d_cnt_tv.setText(d_count + "");
         f_cnt_tv.setText(f_count + "");
+
 
         items = new ArrayList<Item>();
 
@@ -368,6 +369,11 @@ public class MainActivity extends ListActivity {
             s_cnt_tv.setText(s_count+"");
             f_cnt_tv.setText(f_count+"");
 
+            m_time.setText("");
+            d_time.setText("");
+            s_time.setText("");
+            f_time.setText("");
+
 
             listView();
             Log.i("test", "new Header and zero set");
@@ -470,6 +476,32 @@ public class MainActivity extends ListActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+
+        Dao dao = new Dao(getApplicationContext());
+        m_count = dao.getDailyCount("medicine");
+        d_count = dao.getDailyCount("diaper");
+        s_count = dao.getDailyCount("sleep");
+        f_count = dao.getDailyCount("feed");
+
+        m_cnt_tv.setText(m_count + "");
+        s_cnt_tv.setText(s_count + "");
+        d_cnt_tv.setText(d_count + "");
+        f_cnt_tv.setText(f_count + "");
+
+        m_t = dao.getRecentTime("medicine");
+        s_t = dao.getRecentTime("sleep");
+        d_t = dao.getRecentTime("diaper");
+        f_t = dao.getRecentTime("feed");
+
+        m_time.setText(m_t);
+        d_time.setText(d_t);
+        s_time.setText(s_t);
+        f_time.setText(f_t);
+
+
+
+
 
         refreshData();
     }
