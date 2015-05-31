@@ -20,13 +20,13 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:src="@drawable/white_medicine"
-                android:layout_width="80dp"
+                android:src="@drawable/medicine_t"
+                android:layout_width="60dp"
                 android:layout_height="0dp"
                 android:id="@+id/widget_medicine"
                 android:padding="0sp"
-                android:scaleType="fitXY"
-                android:background="@drawable/medicine_round"
+                android:scaleType="fitCenter"
+               
                 android:layout_weight="8"
                 android:layout_gravity="center_horizontal" />
 
@@ -65,13 +65,13 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:src="@drawable/white_sleep"
-                android:layout_width="80dp"
+                android:src="@drawable/sleep_t"
+                android:layout_width="60dp"
                 android:layout_height="0dp"
                 android:id="@+id/widget_sleep"
                 android:padding="0sp"
                 android:scaleType="fitCenter"
-                android:background="@drawable/sleep_round"
+
                 android:layout_weight="8"
                 android:layout_gravity="center_horizontal" />
 
@@ -108,13 +108,13 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:src="@drawable/white_diaper"
-                android:layout_width="80dp"
+                android:src="@drawable/diaper_t"
+                android:layout_width="60dp"
                 android:layout_height="0dp"
                 android:id="@+id/widget_diaper"
                 android:padding="0sp"
                 android:scaleType="fitCenter"
-                android:background="@drawable/diaper_round"
+
                 android:layout_weight="8"
                 android:layout_gravity="center_horizontal" />
 
@@ -152,13 +152,13 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:src="@drawable/white_milk"
-                android:layout_width="80dp"
+                android:src="@drawable/feed_t"
+                android:layout_width="60dp"
                 android:layout_height="0dp"
                 android:id="@+id/widget_milk"
                 android:padding="0sp"
                 android:scaleType="fitCenter"
-                android:background="@drawable/milk_round"
+
                 android:layout_weight="8"
                 android:layout_gravity="center_horizontal" />
 
